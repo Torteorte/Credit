@@ -1,0 +1,398 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: lavender;
+}
+h1,
+h2 {
+  font-family: "Georgia", serif;
+}
+p {
+  font-weight: 400;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.hidden {
+  color: rgba(211, 211, 211, 0.5);
+  font-size: 20px;
+}
+/* Верхушка */
+header {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0 2px 20px -5px black;
+}
+header .fixed-menu {
+  width: 65%;
+  margin: 10px auto 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+header .fixed-menu .header-logo {
+  background: url("small_img/logo.PNG") no-repeat center;
+  background-size: cover;
+  height: 50px;
+  width: 300px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+header .fixed-menu .header-inform {
+  margin-left: 10px;
+  border-left: 2px solid darkgray;
+  align-self: center;
+  height: 70px;
+  padding-left: 10px;
+  line-height: 5px;
+}
+header .fixed-menu .header-telephone {
+  margin: auto;
+  margin-right: 0;
+}
+/* Часть с двумя бабами */
+.main-first {
+  height: 850px;
+  position: relative;
+  display: flex;
+  padding-top: 70px;
+}
+.main-first::after {
+  content: '';
+  opacity: 0.5;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background: url("big_img/two_woman.JPG") right no-repeat;
+  background-size: cover;
+}
+@keyframes opac {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main-first::after {
+  animation-name: opac;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.landing-block {
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 600px;
+  margin: auto;
+  margin-right: 50px;
+  display: flex;
+  font-size: 30px;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 5px 100px 10px black;
+  padding: 10px;
+}
+.landing-block div,
+.landing-buttons div {
+  width: auto;
+}
+.landing-block .landing-text {
+  text-align: center;
+}
+.landing-block .landing-list {
+  padding-top: 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  display: flex;
+}
+.landing-block .landing-list div {
+  width: 25%;
+  padding: 10px 0 10px 50px;
+  position: relative;
+  margin-left: 20px;
+  font-weight: 400;
+}
+.landing-block .landing-list div:last-child {
+  margin-right: 20px;
+}
+.landing-block .landing-list div::after {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 30px;
+  top: 25%;
+  left: 5px;
+  background: url("middle_img/1.PNG") no-repeat;
+  background-size: 100% 100%;
+}
+.landing-block .landing-list div:nth-child(2)::after {
+  background-image: url("middle_img/2.PNG");
+}
+.landing-block .landing-list div:last-child::after {
+  background-image: url("middle_img/3.PNG");
+}
+.landing-buttons {
+  display: flex;
+  margin: 20px 0px;
+}
+.landing-buttons a {
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  margin-right: 5px;
+  margin-left: 10px;
+  transition: background-color 1s, box-shadow 100ms;
+}
+.landing-buttons .take-money {
+  background-color: #45af45;
+}
+.landing-buttons .take-money span {
+  background-color: #1e771e;
+  color: #6bd46b;
+}
+.landing-buttons .inform {
+  background-color: goldenrod;
+}
+.landing-buttons .inform span {
+  background-color: darkgoldenrod;
+  color: goldenrod;
+}
+.landing-buttons span {
+  margin-left: 10px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+}
+.landing-buttons .take-money:hover,
+.inform:hover,
+.take-money:focus,
+.inform:focus {
+  background-color: #751a75;
+  box-shadow: 0 0 20px -5px black;
+}
+/* Блок второй */
+.main-second {
+  width: 100%;
+}
+.main-second h2 {
+  padding-top: 70px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #806d8a;
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+.setka {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 60%;
+  margin: auto;
+  padding: 50px;
+  text-align: left;
+}
+.setka div {
+  padding: 50px 10px 10px 30px;
+  margin: 10px;
+  position: relative;
+}
+.setka div::before {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 60px;
+  top: 0;
+  left: 30px;
+  background-repeat: no-repeat;
+}
+.setka p {
+  color: #505050;
+  font-size: 15px;
+}
+.first-setka div:nth-child(1)::before {
+  background-image: url("small_img/1.PNG");
+}
+.first-setka div:nth-child(2)::before {
+  background-image: url("small_img/2.PNG");
+}
+.first-setka div:nth-child(3)::before {
+  background-image: url("small_img/3.PNG");
+}
+.first-setka div:nth-child(4)::before {
+  background-image: url("small_img/4.PNG");
+}
+.first-setka div:nth-child(5)::before {
+  background-image: url("small_img/5.PNG");
+}
+.first-setka div:nth-child(6)::before {
+  background-image: url("small_img/6.PNG");
+}
+.second-setka {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-bottom: 100px;
+}
+.second-setka div:nth-child(1)::before {
+  background-image: url("small_img/13.PNG");
+}
+.second-setka div:nth-child(2)::before {
+  background-image: url("small_img/14.PNG");
+}
+.second-setka div:nth-child(3)::before {
+  background-image: url("small_img/15.PNG");
+}
+.second-setka div:nth-child(4)::before {
+  background-image: url("small_img/16.PNG");
+}
+/* Третий блок */
+.main-third {
+  width: 100%;
+  background-color: darkkhaki;
+  background-image: linear-gradient(to left top, rgba(5, 15, 27, 0.8), rgba(5, 15, 27, 0.8)), url(big_img/office.JPG);
+  background-position: top;
+  background-repeat: repeat, no-repeat;
+  background-size: contain, cover;
+}
+.main-third .h2-block {
+  padding: 50px;
+  margin: auto;
+}
+.main-third .h2-block h2 {
+  margin: auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  width: 50%;
+  min-width: 400px;
+  max-width: 800px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px -5px white;
+}
+.collectors {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+.collectors div {
+  font-size: 14px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 30px;
+  border-radius: 40px;
+  box-shadow: 0 0 20px -5px white;
+  transition: 0.75s;
+  color: #1f1f1f;
+}
+.collectors div:hover,
+.collectors div:focus {
+  background-color: #c7c7c7;
+}
+.collectors div:hover img,
+.collectors div:focus img {
+  transform: scale(1.1);
+}
+.collectors img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.collectors h3 {
+  border-bottom: 1px solid #808080;
+  padding-bottom: 5px;
+  color: #58177e;
+}
+/* Подвал сайта */
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: lavender;
+}
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  margin: auto;
+  max-width: 100%;
+  justify-content: center;
+}
+.footer-links a {
+  padding: 10px;
+  font-size: 16px;
+  transition: 100ms;
+}
+.footer-links a:hover {
+  color: green;
+}
+.buttons-angry {
+  display: flex;
+  margin: auto;
+  max-width: 100%;
+  justify-content: center;
+}
+.buttons-angry a {
+  width: 250px;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  font-size: 16px;
+  margin: 20px;
+  border: 2px solid #6d21b4;
+  border-radius: 5px;
+  color: #5d15a0;
+  box-shadow: 0 2px 20px -5px black;
+  transition: 200ms;
+}
+.buttons-angry a:hover {
+  color: white;
+  background-color: #6d21b4;
+}
+.social {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.social a {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  background: url("middle_img/facebook.png") no-repeat;
+  background-size: 100% 100%;
+  transition: 0.75s;
+}
+.social a:nth-child(2) {
+  background-image: url("middle_img/youtube.png");
+}
+.social a:last-child {
+  background-image: url("middle_img/inst.png");
+}
+.social a:hover,
+.social a:focus {
+  transform: scale(1.2);
+}
+.license {
+  border-top: black 1px solid;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 12px;
+  color: #474747;
+  padding: 20px;
+}
